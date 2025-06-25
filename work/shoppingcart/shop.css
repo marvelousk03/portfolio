@@ -1,0 +1,115 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #333;
+  --accent: #55efc4;
+  --header-color: #ff7675;
+}
+
+body.dark-mode {
+  --bg-color: #2f3542;
+  --text-color: #f1f2f6;
+  --accent: #70a1ff;
+  --header-color: #e17055;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.4s, color 0.4s;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-color);
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+img {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #b2bec3;
+  cursor: not-allowed;
+}
+
+.checkout-btn {
+  background-color: #fd79a8;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#totalDisplay {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.toast {
+  background-color: #00cec9;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.show-toast {
+  opacity: 1;
+  transform: translateY(0);
+}
